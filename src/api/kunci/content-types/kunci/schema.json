@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kuncis",
+  "info": {
+    "singularName": "kunci",
+    "pluralName": "kuncis",
+    "displayName": "Kunci",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namasantri": {
+      "type": "string"
+    },
+    "isReturned": {
+      "type": "boolean",
+      "default": false
+    },
+    "Reason": {
+      "type": "text"
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "kunci"
+    }
+  }
+}
